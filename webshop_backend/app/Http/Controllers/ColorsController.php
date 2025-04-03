@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Colors;
+use App\Models\Colors as ColorsAlias;
+use Faker\Core\Color;
+use Illuminate\Console\View\Components\Task;
 use Illuminate\Http\Request;
 
 class ColorsController extends Controller
@@ -11,21 +14,11 @@ class ColorsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $query = Colors::query();
+        $colors = Colors::all();
+        return $colors;
 
-        if ($request->has('name')) {
-            $query->where('name', 'like', '%' . $request->name . '%');
-        }
-
-        if ($request->has('hex_code')) {
-            $query->where('hex_code', 'like', '%' . $request->hex_code . '%');
-        }
-
-        $colors = $query->get();
-
-        return response()->json($colors);
     }
 
     /**
@@ -33,30 +26,25 @@ class ColorsController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'hex_code' => 'required|string|max:255|regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/',
+            'hex_code' => 'required|string|max:7',
         ]);
 
-        $color = Colors::create($validatedData);
+        Colors::create($validated);
 
-        return response()->json([
-            'success' => true,
-            'data' => $color,
-            'message' => 'Color created successfully.'
-        ], 201);
+        return redirect()->route('colors.index')
+            ->with('success', 'Color created successfully.');
+
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Colors $color)
-    {
-        return response()->json([
-            'success' => true,
-            'data' => $color
-        ]);
 
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
     }
 
     /**
@@ -64,30 +52,24 @@ class ColorsController extends Controller
      */
     public function update(Request $request, Colors $color)
     {
-        $validatedData = $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'hex_code' => 'required|string|max:255|regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/',
+            'hex_code' => 'required|string|max:7',
         ]);
 
-        $color->update($validatedData);
+        $color->update($validated);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Color updated successfully.',
-            'data' => $color,
-        ]);
+        return redirect()->route('colors.index')
+            ->with('success', 'Color updated successfully.');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Colors $colors)
+    public function destroy(Colors $color)
     {
-        $colors->delete();
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Color deleted successfully.',
-        ]);
+        $color->delete();
+        return redirect()->route('colors.index')->with('success', 'Color deleted successfully.');
     }
 }
