@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->foreignId('color_id')->constrained('colors');
             $table->foreignId('brand_id')->constrained('brands');
+            $table->string('images')->nullable();
+            $table->string('discount')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
