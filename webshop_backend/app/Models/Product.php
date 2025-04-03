@@ -33,19 +33,19 @@ class Product extends Model
     // Item može imati više kategorija (many-to-many)
     public function categories()
     {
-        return $this->belongsToMany(Categories::class, 'item_category');
+        return $this->belongsToMany(Categories::class, 'product_category');
     }
 
     // Item može imati više veličina (many-to-many)
     public function sizes()
     {
-        return $this->belongsToMany(Size::class, 'item_size');
+        return $this->belongsToMany(Size::class, 'product_size');
     }
 
     // Item može imati više popusta (many-to-many)
     public function discounts()
     {
-        return $this->belongsToMany(Discounts::class, 'item_discount');
+        return $this->belongsToMany(Discounts::class, 'product_discounts');
     }
 
     // Item može imati više slika (one-to-many)
