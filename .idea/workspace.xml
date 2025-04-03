@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c58632a-8a87-41e6-8d1b-3c87d0ef4396" name="Changes" comment="Added API route">
-      <change beforePath="$PROJECT_DIR$/webshop_backend/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_backend/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_backend/database/migrations/0001_01_01_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_backend/database/migrations/0001_01_01_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_backend/database/migrations/2025_04_03_102652_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_backend/database/migrations/2025_04_03_102652_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_backend/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_backend/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_backend/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_backend/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,21 +177,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/DatabaseSeeders",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Beha/PhpstormProjects/TESTING",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Size__Discount__CRUD&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Beha/PhpstormProjects/TESTING&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/webshop_backend/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
@@ -223,6 +223,13 @@
       <workItem from="1743669933519" duration="26000" />
       <workItem from="1743676230417" duration="1847000" />
       <workItem from="1743678718296" duration="3463000" />
+      <workItem from="1743694937324" duration="71000" />
+      <workItem from="1743695018817" duration="564000" />
+      <workItem from="1743695610186" duration="8000" />
+      <workItem from="1743695624462" duration="32000" />
+      <workItem from="1743695664183" duration="93000" />
+      <workItem from="1743695785355" duration="765000" />
+      <workItem from="1743696665680" duration="2556000" />
     </task>
     <task id="LOCAL-00001" summary="Added API route">
       <option name="closed" value="true" />

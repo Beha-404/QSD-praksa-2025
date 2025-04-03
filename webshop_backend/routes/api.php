@@ -13,3 +13,9 @@ Route::get('/user', function (Request $request) {
 Route::apiResource('/colors', ColorsController::class);
 
 Route::apiResource('/brands', BrandsController::class);
+
+Route::apiResource('/sizes', \App\Http\Controllers\SizeController::class);
+
+Route::apiResource('/discounts', \App\Http\Controllers\DiscountController::class);
+
+Route::apiResource('/users', \App\Http\Controllers\UserController::class);
